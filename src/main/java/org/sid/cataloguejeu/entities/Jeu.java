@@ -19,4 +19,5 @@ public class Jeu {
     private String nom;
     private double prix;
     private String categorie;
+    private String img;
 }

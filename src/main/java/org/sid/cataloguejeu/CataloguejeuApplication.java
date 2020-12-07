@@ -17,10 +17,10 @@ public class CataloguejeuApplication {
     @Bean
     CommandLineRunner start(JeuRepository jeuRepository) {
         return args -> {
-            Jeu j1 =jeuRepository.save(new Jeu(null, "J1",10,"Action"));
-            Jeu j2 =jeuRepository.save(new Jeu(null, "J2",20,"Horreur"));
-            Jeu j3 =jeuRepository.save(new Jeu(null, "J3",30,"Action"));
-            Jeu j4 =jeuRepository.save(new Jeu(null, "J4",40,"Puzzle"));
+            Jeu j1 =jeuRepository.save(new Jeu(null, "J1",10,"Action",""));
+            Jeu j2 =jeuRepository.save(new Jeu(null, "J2",20,"Horreur",""));
+            Jeu j3 =jeuRepository.save(new Jeu(null, "J3",30,"Action",""));
+            Jeu j4 =jeuRepository.save(new Jeu(null, "J4",40,"Puzzle",""));
         };
     }
 }
