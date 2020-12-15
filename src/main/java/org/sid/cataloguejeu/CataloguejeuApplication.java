@@ -1,7 +1,7 @@
 package org.sid.cataloguejeu;
 
-import org.sid.cataloguejeu.dao.JeuRepository;
-import org.sid.cataloguejeu.entities.Jeu;
+import org.sid.cataloguejeu.dao.VinylRepository;
+import org.sid.cataloguejeu.entities.Vinyl;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,12 +15,12 @@ public class CataloguejeuApplication {
     }
 
     @Bean
-    CommandLineRunner start(JeuRepository jeuRepository) {
+    CommandLineRunner start(VinylRepository vinylRepository) {
         return args -> {
-            Jeu j1 =jeuRepository.save(new Jeu(null, "J1",10,"Action",""));
-            Jeu j2 =jeuRepository.save(new Jeu(null, "J2",20,"Horreur",""));
-            Jeu j3 =jeuRepository.save(new Jeu(null, "J3",30,"Action",""));
-            Jeu j4 =jeuRepository.save(new Jeu(null, "J4",40,"Puzzle",""));
+            Vinyl v1 = vinylRepository.save(new Vinyl(null, "V1",10,"Country",""));
+            Vinyl v2 = vinylRepository.save(new Vinyl(null, "V2",20,"Rock",""));
+            Vinyl v3 = vinylRepository.save(new Vinyl(null, "V3",30,"Jazz",""));
+            Vinyl v4 = vinylRepository.save(new Vinyl(null, "V4",40,"Rock",""));
         };
     }
 }
